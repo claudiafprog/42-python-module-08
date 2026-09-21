@@ -31,7 +31,7 @@ def check_packages() -> bool:
         print("To install using pip:")
         print("  pip install -r requirements.txt")
         print("To install using Poetry:")
-        print("  poetry install\n  poetry run python loading.py")
+        print("  poetry install\n  poetry run python3 loading.py")
     return all_ok
 
 
