@@ -45,7 +45,7 @@ Exercise 2: Accessing the Mainframe (ex2/)
 ```bash
 # --- Exercise 0 ---
 python3 ex0/construct.py
-python3 -m venv matrix_env
+python3 -m virtualenv matrix_env
 source matrix_env/bin/activate  # (Windows: matrix_env\Scripts\activate)
 python3 ex0/construct.py
 
@@ -55,7 +55,7 @@ pip install -r ex1/requirements.txt
 python3 ex1/loading.py          # Run pip analysis
 
 # Optional Poetry test
-cd ex1 && poetry install && poetry run python loading.py && cd ..
+cd ex1 && poetry install && poetry run python3 loading.py && cd ..
 
 # --- Exercise 2 ---
 cp ex2/.env.example ex2/.env
