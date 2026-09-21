@@ -39,11 +39,13 @@ def oracle() -> None:
         print()
         print("Environment security check:")
         print("[OK] No hardcoded secrets detected")
-        if os.path.exists(".env"):
-            print("[OK] .env file properly configured")
-        else:
+        if not os.path.exists(".env"):
             print("[WARNING] .env file not found "
                   "(using system environment or defaults)")
+        elif missing_conf:
+            print("[WARNING] .env file partially configured (missing keys)")
+        else:
+            print("[OK] .env file properly configured")
         print("[OK] Production overrides available")
         print()
         print("The Oracle sees all configurations.")
